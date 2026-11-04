@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ProductHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Product<span class="brand-accent">Hub</span></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html"><span class="nav-icon">▦</span> Dashboard</a>
+        <a class="nav-link" href="products.html"><span class="nav-icon">▤</span> Products</a>
+        <a class="nav-link" href="compare.html"><span class="nav-icon">⇄</span> Compare Products</a>
+        <a class="nav-link" href="requests.html"><span class="nav-icon">▧</span> Canvas Requests</a>
+        <a class="nav-link" href="orders.html"><span class="nav-icon">🛒</span> My Orders</a>
+        <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span> Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><strong>Need help?</strong><p>Manage your products and requests in one place.</p></div>
+        <a class="nav-link logout-link" href="login.html" data-logout><span class="nav-icon">↪</span> Log out</a>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumbs">Workspace <span>/</span> <strong>Dashboard</strong></div>
+        <div class="topbar-actions">
+          <a class="icon-button" href="requests.html" aria-label="Notifications">♧</a>
+          <div class="user-mini"><div class="avatar">P</div><div><strong id="headerUser">Pau</strong><small>Customer</small></div></div>
+        </div>
+      </header>
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><p class="eyebrow">OVERVIEW</p><h1>Dashboard</h1><p class="muted">Welcome back! Here's what's happening with your store.</p></div>
+          <a class="button button-primary" href="products.html">＋ Browse products</a>
+        </section>
+        <section class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon orange">▤</span><span class="stat-trend">Catalog</span></div><p>Total products</p><strong id="totalProducts">8</strong><small>Sample products available</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon green">✓</span><span class="stat-trend">In stock</span></div><p>Available products</p><strong id="availableProducts">7</strong><small>Ready to order</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon purple">▧</span><span class="stat-trend">Requests</span></div><p>Pending canvas requests</p><strong id="pendingRequests">0</strong><small>Awaiting review</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon blue">🛒</span><span class="stat-trend">Orders</span></div><p>Completed orders</p><strong id="completedOrders">0</strong><small>Your order activity</small></article>
+        </section>
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-heading"><div><h2>Recently added products</h2><p class="muted">Explore items in the catalog</p></div><a class="text-link" href="products.html">View all →</a></div>
+            <div class="mini-product-list" id="recentProducts"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading"><div><h2>Quick actions</h2><p class="muted">What would you like to do?</p></div></div>
+            <a class="action-row" href="products.html"><span class="action-icon orange">⌕</span><span><strong>Find a product</strong><small>Search the product catalog</small></span><b>→</b></a>
+            <a class="action-row" href="compare.html"><span class="action-icon purple">⇄</span><span><strong>Compare prices</strong><small>Compare items side by side</small></span><b>→</b></a>
+            <a class="action-row" href="requests.html"><span class="action-icon blue">▧</span><span><strong>Request a canvas form</strong><small>Submit a product request</small></span><b>→</b></a>
+            <a class="action-row" href="orders.html"><span class="action-icon green">🛒</span><span><strong>View my orders</strong><small>Check your order history</small></span><b>→</b></a>
+          </article>
+        </section>
+        <div class="notice"><span>ⓘ</span><p><strong>Demo version:</strong> Product and activity data are stored in this browser only. Connect a backend and database before using real customer accounts or transactions.</p></div>
+        <footer class="footer">© 2026 ProductHub · Academic project prototype</footer>
+      </div>
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+</body>
+</html>
